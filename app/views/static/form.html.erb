@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
 
     <style>
-    .bg-light {
-    background-color: #bd915a!important;
-    }
+      .bg-light {
+        background-color: #bd915a!important;
+      }
 
-    .form {
-    margin:0.5rem
-    }
-
+      .form {
+        margin:0.5rem
+      }
     </style>
     
-</head>
-   
-   <header>
+  </head>
+  <body>
+    <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Gossip Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,23 +40,23 @@
       </nav>
     </header>
 
-
-
-
-<!-- Formulaire de création de potin -->
-
+    <main>
+      <!-- Formulaire de création de potin -->
       <div class="form">
         <%= form_tag('/gossips', method: :post) do %>
-          <div>
+          <div class="form-group">
             <%= label_tag(:title, "Titre du potin :") %>
-            <%= text_field_tag(:title) %>
+            <%= text_field_tag(:title, nil, class: 'form-control') %>
           </div>
 
-          <div>
+          <div class="form-group">
             <%= label_tag(:content, "Contenu du potin :") %>
-            <%= text_area_tag(:content) %>
+            <%= text_area_tag(:content, nil, class: 'form-control') %>
           </div>
 
-          <%= submit_tag("Enregistrer") %>
+          <%= submit_tag("Enregistrer", class: 'btn btn-primary') %>
         <% end %>
       </div>
+    </main>
+  </body>
+</html>

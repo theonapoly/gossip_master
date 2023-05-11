@@ -24,8 +24,8 @@ end
   User.create!(first_name: FFaker::NameFR.first_name, last_name: FFaker::NameFR.last_name, description: Faker::Adjective.negative, email: Faker::Internet.email, age: rand(14..80), city_id: City.all.sample.id)
 end
 
-10.times do
-  Gossip.create!(title: Faker::Lorem.paragraph_by_chars(number: 8, supplemental: false), content: Faker::Fantasy::Tolkien.poem, user_id: User.all.sample.id)
+20.times do
+  Gossip.create!(title: Faker::Lorem.paragraph_by_chars(number: 8, supplemental: false), content: Faker::Movies::Hobbit.quote, user_id: User.all.sample.id)
 end
 
 5.times do
