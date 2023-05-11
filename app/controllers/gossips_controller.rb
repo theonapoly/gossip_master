@@ -26,7 +26,7 @@ class GossipsController < ApplicationController
     else
       flash[:alert] = @gossip.errors.full_messages[0]
       render 'gossips/index'
-    end
+    end 
   end
 
   def edit
