@@ -17,11 +17,11 @@ CommentLike.destroy_all
 GossipLike.destroy_all
 
 5.times do
-  City.create!(name: Faker::Address.city, zip_code: Faker::Address.zip_code)
+  City.create!(name: FFaker::AddressFR.city, zip_code: Faker::Address.zip_code)
 end
 
 5.times do
-  User.create!(first_name: Faker::Name.middle_name, last_name: Faker::Name.last_name, description: Faker::Adjective.negative, email: Faker::Internet.email, age: rand(14..80), city_id: City.all.sample.id)
+  User.create!(first_name: FFaker::NameFR.first_name, last_name: FFaker::NameFR.last_name, description: Faker::Adjective.negative, email: Faker::Internet.email, age: rand(14..80), city_id: City.all.sample.id)
 end
 
 10.times do
@@ -34,7 +34,7 @@ end
 
 5.times do
   gossip = Gossip.all.sample # On choisit un gossip au hasard
-  comment = Comment.create!(content: Faker::Fantasy::Tolkien.poem, user_id: User.all.sample.id, gossip_id: gossip.id) # On créé un commentaire sur ce gossip
+  comment = Comment.create!(content: FFaker::LoremFR.sentence, user_id: User.all.sample.id, gossip_id: gossip.id) # On créé un commentaire sur ce gossip
   rand(1..3).times do #Pour chaque commentaire créé, il crée également un certain nombre de commentaires enfants (déterminé au hasard entre 1 et 3).
     child_comment = Comment.create!(content: Faker::Lorem.paragraph_by_chars(number: 140), user_id: User.all.sample.id, parent_comment_id: comment.id, gossip_id: gossip.id
     )
