@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+
+    <style>
+    /* body {
+        background-color: #bd915a;
+    } */
+    .bg-light {
+    background-color: #bd915a!important;
+    }
+
+     .title{
+  
+  justify-content: center;
+}
+
+.card {
+  margin: 0 10px;
+  display: inline-block;
+  justify-content: center;
+}
+img {
+   width: 100%;
+  height: 200px;
+  object-fit: cover; /* pour éviter la déformation de l'image */
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+<!--NAV-->
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">L'équipe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/">Accueil<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/team">Notre équipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Nous contacter</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<!--MAIN-->
+<main>
+
+<div class="title">
+<h1>Notre équipe</h1>
+<p>Voici les membres de notre équipe :</p>
+</div>
+
+</br>
+
+<div class="card" style="width: 18rem;">
+  <img src="/assets/aragorn.webp" class="card-img-top" alt="aragorn">
+  <div class="card-body">
+    <h5 class="card-title">Aragorn</h5>
+    <p class="card-text">Fils d'Arathorn et de Gilraen, petit-fils d'Arador. Avant la Guerre de l'Anneau, il est le chef des Rôdeurs du Nord, surnommé Grand-Pas.</p>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="/assets/gandalf.webp" class="card-img-top" alt="aragorn">
+  <div class="card-body">
+    <h5 class="card-title">Gandalf</h5>
+    <p class="card-text">Gandalf le Gris, plus tard connu sous le nom de Gandalf le Blanc, et initialement nommé Olórin ou Mithrandir.</p>
+  </div>
+</div>
+
+</main>
+
+</body>
+
+</html>

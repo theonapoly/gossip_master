@@ -1,0 +1,9 @@
+<div>
+<p> Ville : <%= @city.name %></p>
+
+<% @city.users.each do |user| %>
+<% user.gossips.each.with_index do |gossip, index| %>
+<h3> Gossip n°<%= gossip.id + 1 %> - <%= gossip.title %></h3>
+<%= gossip.user.first_name %> <%= gossip.user.last_name %>
+ <% end %>
+ <% end %>
